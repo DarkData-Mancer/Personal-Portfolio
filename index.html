@@ -932,7 +932,7 @@
                     </p>
                     <div class="hero-btns animate delay-4">
                         <a href="#projects" class="btn">View My Work</a>
-                        <a href="/runyararo mtazu cv.pdf" class="btn btn-secondary" download="Runyararo_Mtazu_CV" target="_blank">Download CV</a>
+                        <a href="/Runyararo Mtazu CV.pdf" class="btn btn-secondary" download="Runyararo_Mtazu_CV" target="_blank">Download CV</a>
                     </div>
                     <div class="social-icons animate delay-4">
                         <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
@@ -1168,22 +1168,34 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" action="https://formspree.io/f/myzkrwqb" method="post">
-                   
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="da554e37-abb7-40ba-882c-41a4fe53fa3a">
+                
+                    <!-- Form Inputs. Each input must have a name="" attribute -->
+                     <div class="form-group">
+                        <input type="email" name="email" class="form-control"  placeholder="Your Email">
+                     </div>
+
                     <div class="form-group">
-                        <input type="email"  name="email" class="form-control" placeholder="Your Email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <textarea class="form-control" placeholder="Your Message" name="message" required></textarea>
+                        <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
                     </div>
 
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Subject" name="subject" required>
                     </div>
-
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
+                
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                    <!-- Custom Confirmation / Success Page -->
+                    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+                
+                    <button type="submit" class="btn">Submit</button>
+                
+                </form> 
+               
             </div>
         </div>
     </section>
@@ -1214,6 +1226,10 @@
 
     <!-- JavaScript -->
     <script>
+
+
+
+
         // Mobile Menu Toggle
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
